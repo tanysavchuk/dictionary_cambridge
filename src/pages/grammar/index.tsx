@@ -15,7 +15,9 @@ import BrowseGrammar from "../../components/browse-grammar";
 import { browseGrammars } from "../../mocks/browse-grammar";
 import CardContent from "../../components/cards-content";
 import { cardsContent } from "../../mocks/cards-content";
-
+import CardArticle from "../../components/cards-article";
+import WordOfTheDay from "../../components/card-word-ofthe-day";
+import { wordOfTheDay } from "../../mocks/card-word-of-the-day";
 const Grammar = () => {
   return (
     <>
@@ -87,10 +89,32 @@ const Grammar = () => {
           <div className="w-[68%] my-16">
             <InputSearch />
             <div className="flex items-center  mt-8">
-              <Button name="English" />
-              <Button name="English-Russian" mx="mx-3" />
-              <Button name="English-Polish" />
-              <Button name="English-German" mx="mx-3" />
+              <Button
+                name="English"
+                bg="bg-fuchsia-800"
+                bgHover="hover:bg-fuchsia-900"
+                textHover="hover:text-rose-100"
+              />
+              <Button
+                name="English-Russian"
+                mx="mx-3"
+                bg="bg-fuchsia-800"
+                bgHover="hover:bg-fuchsia-900"
+                textHover="hover:text-rose-100"
+              />
+              <Button
+                name="English-Polish"
+                bg="bg-fuchsia-800"
+                bgHover="hover:bg-fuchsia-900"
+                textHover="hover:text-rose-100"
+              />
+              <Button
+                name="English-German"
+                mx="mx-3"
+                bg="bg-fuchsia-800"
+                bgHover="hover:bg-fuchsia-900"
+                textHover="hover:text-rose-100"
+              />
             </div>
           </div>
           <div className="absolute bottom-0 right-0">
@@ -265,6 +289,50 @@ const Grammar = () => {
                   <li>Geraldine Mark</li>
                 </ul>
               </div>
+            </div>
+            <div>
+              <CardArticle
+                picture="https://dictionary.cambridge.org/rss/images/back.jpg"
+                chapter="BLOG"
+                title="Watch your back! Idioms with the word ‘back’"
+                date="March 01, 2023"
+                link="#"
+                button={
+                  <Button
+                    name="Read More"
+                    bg="bg-indigo-900"
+                    bgHover="hover:bg-slate-800"
+                  />
+                }
+              />
+              <WordOfTheDay
+                word={wordOfTheDay.word}
+                transliterationUK={wordOfTheDay.transliterationUK}
+                transliterationUS={wordOfTheDay.transliterationUS}
+                text={wordOfTheDay.text}
+                button={
+                  <Button
+                    name="About this"
+                    bg="bg-indigo-900"
+                    bgHover="hover:bg-slate-800"
+                  />
+                }
+              />
+
+              <CardArticle
+                picture="	https://dictionary.cambridge.org/rss/images/resilience-hub-1024x683-2.jpg"
+                chapter="NEW WORDS"
+                title="resilience hub"
+                date="March 06, 2023"
+                link="#"
+                button={
+                  <Button
+                    name="More new words"
+                    bg="bg-indigo-900"
+                    bgHover="hover:bg-slate-800"
+                  />
+                }
+              />
             </div>
           </div>
         </div>
