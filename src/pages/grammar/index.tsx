@@ -24,10 +24,11 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import InternalAdvertising from "../../components/internal-advertising";
 const Grammar = () => {
   return (
     <>
-      <div className="flex justify-center bg-indigo-900 text-white px-5">
+      <div className="flex justify-center bg-indigo-900 text-white px-5 w-full fixed top-0 z-50">
         <div className=" flex items-center justify-between w-full ">
           <div className="flex item-center h-full">
             <div className="sm:border-r-0 md:border-r border-gray-400 pr-5 py-5">
@@ -76,12 +77,9 @@ const Grammar = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-l from-pink-900 via-rose-700 to-rose-900">
-        <div
-          className="flex items-center
-      justify-between p-5 relative"
-        >
-          <div className="bg-rose-600 h-9 w-20 absolute top-0 left-0"></div>
+      <div className="bg-gradient-to-l from-pink-900 via-rose-700 to-rose-900 w-full mt-14">
+        <div className="flex items-center justify-between p-5 relative">
+          {/* <div className="bg-rose-600 h-9 w-20 absolute top-0 left-0"></div>
           <div className="absolute bottom-0 left-0">
             <div className="flex items-baseline">
               <FontAwesomeIcon
@@ -91,8 +89,8 @@ const Grammar = () => {
               <div className="bg-violet-800 h-14 w-8"></div>
             </div>
             <div className="bg-fuchsia-400 h-9 w-24"></div>
-          </div>
-          <div className="absolute top-0 left-[55%]">
+          </div> */}
+          <div className="absolute top-[15px] left-[55%]">
             <FontAwesomeIcon
               icon={faCircle}
               className="text-4xl text-sky-500"
@@ -143,7 +141,7 @@ const Grammar = () => {
               />
             </div>
           </div>
-          <div className="absolute bottom-0 right-0">
+          {/* <div className="absolute bottom-0 right-0">
             <FontAwesomeIcon
               icon={faCircle}
               className="text-4xl text-indigo-900"
@@ -156,12 +154,12 @@ const Grammar = () => {
                 className="text-4xl text-violet-800"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div>
-        <div className="w-[75%]">
-          <div className="m-7 px-14 ">
+      <div className="flex">
+        <div className="md:w-[75%] sm:w-full sm:px-5 md:mx-0 ">
+          <div className="md:mx-7 my-7 md:px-14">
             <h2 className="mt-10 mb-5 text-3xl font-light">
               Explore the English Grammar
             </h2>
@@ -170,10 +168,9 @@ const Grammar = () => {
               grammar is used in natural written and spoken English.
             </p>
           </div>
-
-          <div className="bg-cyan-100 w-full m-7 px-14 py-7">
+          <div className="bg-cyan-100 md:m-7 md:px-14 md:py-7 sm:p-3">
             <div className="flex">
-              <div className=" w-16 bg-pink-700"></div>
+              <div className=" md:w-16 sm:w-10 bg-pink-700"></div>
               <div className="bg-white w-full text-start text-gray-700">
                 <ol className="text-lg leading-9 mx-7">
                   <Link to="#" className="hover:underline">
@@ -211,7 +208,7 @@ const Grammar = () => {
               </div>
             </div>
           </div>
-          <div className="bg-cyan-100 w-full m-7 px-14 py-7">
+          <div className="bg-cyan-100  md:mx-7 my-7 md:px-14 px-5 py-7">
             <div>
               <h2 className="text-2xl font-light mb-4">Popular searches</h2>
               <ol className="grid grid-cols-2 gap-2.5  list-inside font-semibold">
@@ -236,14 +233,12 @@ const Grammar = () => {
                 </Link>
                 <Link to="#">
                   <li>
-                    {" "}
                     <span className="mr-1 font-light">04</span>Past continuous
                     or past simple?
                   </li>
                 </Link>
                 <Link to="#">
                   <li>
-                    {" "}
                     <span className="mr-1 font-light">05</span>Dates
                   </li>
                 </Link>
@@ -261,7 +256,6 @@ const Grammar = () => {
                 </Link>
                 <Link to="#">
                   <li>
-                    {" "}
                     <span className="mr-1 font-light">08</span>Adverbs and
                     adverb phrases: position
                   </li>
@@ -274,14 +268,13 @@ const Grammar = () => {
                 </Link>
                 <Link to="#">
                   <li>
-                    {" "}
                     <span className="mr-1 font-light">10</span>Inversion
                   </li>
                 </Link>
               </ol>
             </div>
           </div>
-          <div className="bg-indigo-900 text-white m-7 px-14 py-7 w-full">
+          <div className="bg-indigo-900 text-white md:mx-7 my-7  md:px-14 sm:px-5 py-7 ">
             <h2 className="text-3xl font-light">Browse the English Grammar</h2>
             <div className="flex flex-wrap w-full my-5">
               {browseGrammars.map((browseGrammar, index) => (
@@ -296,7 +289,7 @@ const Grammar = () => {
               Or, browse the Cambridge Dictionary <Link to="#">index</Link>
             </p>
           </div>
-          <div className="m-7 px-14 w-full">
+          <div className="md:mx-7 my-7 md:px-14 w-full ">
             <h2 className="text-3xl font-light mt-10 mb-5">Key features</h2>
             <p className="mb-7 text-lg">
               Adapted from <span className="italic">English Grammar Today</span>
@@ -392,7 +385,13 @@ const Grammar = () => {
                 }
               />
             </div>
+            <div className="relative sm:mt-14 md:hidden sm:visible">
+              <InternalAdvertising />
+            </div>
           </div>
+        </div>
+        <div className="md:w-[350px] mt-10 md:mr-5 sm:hidden sm:w-0 md:block">
+          <InternalAdvertising />
         </div>
       </div>
       <div className="bg-indigo-900 w-full flex justify-center p-5 mt-12">
