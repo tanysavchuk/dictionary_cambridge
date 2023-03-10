@@ -5,12 +5,13 @@ interface ButtonInterface {
   mx?: string;
   bgHover?: string;
   textHover?: string;
+  px?: string;
 }
 const Button = (props: ButtonInterface) => {
   return (
     <>
       <button
-        className={`text-white font-semibold py-1 px-3 ${props.bg} rounded-3xl ${props.textHover} ${props.bgHover} ${props.mx}`}
+        className={`text-white font-semibold py-1 px-3 ${props.bg} rounded-3xl ${props.textHover} ${props.bgHover} ${props.mx} ${props.px}`}
       >
         {props.name}
       </button>
