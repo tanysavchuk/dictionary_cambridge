@@ -14,7 +14,7 @@ const InternalAdvertising = () => {
         <p className="my-5">
           Free word lists and quizzes to create, download and share!
         </p>
-        <div className="flex">
+        <div className="flex md:text-sm">
           <Button name="Go to +Plus" bg="bg-indigo-900" px="px-5" />
           <span className="mx-3">or</span>
           <Button name="Log in" bg="bg-cyan-300 text-indigo-900" px="px-5" />
