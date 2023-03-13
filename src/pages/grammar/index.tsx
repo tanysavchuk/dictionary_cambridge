@@ -25,6 +25,8 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import InternalAdvertising from "../../components/internal-advertising";
+import TapScrollTop from "../../components/tap-scroll-top";
+import FooterMobile from "../../components/footer-mobile";
 const Grammar = () => {
   return (
     <>
@@ -395,8 +397,13 @@ const Grammar = () => {
         </div>
       </div>
       <div className="bg-indigo-900 w-full flex justify-center p-5 mt-12">
-        <div className=" w-[95%]">
+        <div className=" w-[95%] md:flex sm:hidden">
           <Footer />
+          <TapScrollTop />
+        </div>
+        <div className="sm:flex md:hidden w-full ">
+          <FooterMobile />
+          <TapScrollTop />
         </div>
       </div>
     </>
