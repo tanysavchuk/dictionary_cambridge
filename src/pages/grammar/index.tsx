@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
@@ -27,15 +27,28 @@ import {
 import InternalAdvertising from "../../components/internal-advertising";
 import TapScrollTop from "../../components/tap-scroll-top";
 import FooterMobile from "../../components/footer-mobile";
+import LeftSideBar from "../../components/left-side-bar";
 const Grammar = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
   return (
     <>
-      <div className="flex justify-center bg-indigo-900 text-white px-5 w-full fixed top-0 z-50">
-        <div className=" flex items-center justify-between w-full ">
+      <div className="flex justify-center bg-indigo-900 text-white px-5 w-full fixed top-0 z-40">
+        <div className=" flex items-center justify-between w-full">
           <div className="flex item-center h-full">
             <div className="sm:border-r-0 md:border-r border-gray-400 pr-5 py-5">
-              <FontAwesomeIcon icon={faBars} className="text-2xl" />
+              <button className="w-full h-full" onClick={handleOpen}>
+                <FontAwesomeIcon icon={faBars} className="text-2xl" />
+              </button>
             </div>
+            {open ? (
+              <div>
+                <LeftSideBar />
+              </div>
+            ) : null}
             <div className="md:flex items-center font-semibold sm:hidden">
               <Link to="#" className="mx-5">
                 Dictionary
