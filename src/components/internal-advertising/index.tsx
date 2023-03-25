@@ -4,7 +4,7 @@ import Button from "../button";
 const InternalAdvertising = () => {
   return (
     <div className="bg-amber-400 sm:w-full relative flex">
-      <div className="p-5 md:z-40">
+      <div className="p-5 md:z-30">
         <p className="bg-indigo-900 text-white text-xl font-semibold w-min px-3 py-1">
           Cambridge
         </p>

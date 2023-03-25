@@ -18,6 +18,7 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/grammar" element={<Grammar />} />
       </Routes>
+      <div className="hidden bg-gradient-to-l from-pink-900 via-rose-700 to-rose-900 w-full mt-14"></div>
     </div>
   );
 }
